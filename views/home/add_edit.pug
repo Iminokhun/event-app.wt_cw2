@@ -19,8 +19,8 @@ body
       label(for="contactPhone" class="form-label") Contact Phone
       input(type="tel" class="form-control" id="contactPhone" name="contactPhone" required)
     .mb-3
-      label(for="seat" class="form-label") Seat
-      input(type="text" class="form-control" id="seat" name="seat" required)
+      label(for="description" class="form-label") Description
+      input(type="text" class="form-control" id="description" name="description" required)
     button(type="submit" class="btn btn-success" onclick="submitForm()") #{mode === 'Update' ? 'Update' : 'Add'}
     span &nbsp;
     button(type="submit" class="btn btn-primary" onclick="window.location.href='/'") Back to list
@@ -46,7 +46,7 @@ body
 
       document.getElementById('venue').value = eventData.venue || '';
       document.getElementById('contactPhone').value = eventData.contactPhone || '';
-      document.getElementById('seat').value = eventData.seat || '';
+      document.getElementById('description').value = eventData.description || '';
     }
 
     function submitForm() {
@@ -55,7 +55,7 @@ body
         eventDateTime: document.getElementById('eventDateTime').value,
         venue: document.getElementById('venue').value,
         contactPhone: document.getElementById('contactPhone').value,
-        seat: document.getElementById('seat').value,
+        description: document.getElementById('description').value,
       };
 
       const url = "#{mode}" === "Update" ? `/api/event/${!{JSON.stringify(eventData || {})}.id}` : '/api/event';

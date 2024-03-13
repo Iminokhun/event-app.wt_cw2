@@ -15,8 +15,8 @@ const addEventValidation = () => {
       body('contactPhone')
         .notEmpty().withMessage('Contact phone must not be empty')
         .matches(/^\+998\d{9}$/).withMessage('Invalid phone number format, it must be +998xxxxxxxxx'),
-      body('seat')
-        .notEmpty().withMessage('Seat must not be empty'),      
+      body('description')
+        .notEmpty().withMessage('Description must not be empty'),      
     ];
   };
 
@@ -25,7 +25,7 @@ const deleteEventValidation = () => {
     param('id').custom(async (id) => {
       const exists = await event_service.getById(id);
       if (!exists) {
-        throw new Error('Ticket not found');
+        throw new Error('Event not found');
       }
     })
   ];
@@ -36,7 +36,7 @@ const updateEventValidation = () => {
     param('id').custom(async (id) => {
       const exists = await event_service.getById(id);
       if (!exists) {
-        throw new Error('Ticket not found');
+        throw new Error('Event not found');
       }
     }),
     body('eventName')
@@ -51,8 +51,8 @@ const updateEventValidation = () => {
     body('contactPhone')
       .notEmpty().withMessage('Contact phone must not be empty')
       .matches(/^\+998\d{9}$/).withMessage('Invalid phone number format, it must be +998xxxxxxxxx'),
-    body('seat')
-      .notEmpty().withMessage('Seat must not be empty'),      
+    body('description')
+      .notEmpty().withMessage('Description must not be empty'),      
   ];
 };
 
