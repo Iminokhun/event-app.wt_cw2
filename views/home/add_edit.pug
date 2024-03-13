@@ -13,8 +13,8 @@ body
           .input-group-text
             i.fas.fa-calendar-alt
     .mb-3
-      label(for="venue" class="form-label") Venue
-      input(type="text" class="form-control" id="venue" name="venue" required)
+      label(for="location" class="form-label") Location
+      input(type="text" class="form-control" id="location" name="location" required)
     .mb-3
       label(for="contactPhone" class="form-label") Contact Phone
       input(type="tel" class="form-control" id="contactPhone" name="contactPhone" required)
@@ -44,7 +44,7 @@ body
         new tempusDominus.DateTime(moment(eventData.eventDateTime, format))
       );
 
-      document.getElementById('venue').value = eventData.venue || '';
+      document.getElementById('location').value = eventData.location || '';
       document.getElementById('contactPhone').value = eventData.contactPhone || '';
       document.getElementById('description').value = eventData.description || '';
     }
@@ -53,7 +53,7 @@ body
       const eventData = {
         eventName: document.getElementById('eventName').value,
         eventDateTime: document.getElementById('eventDateTime').value,
-        venue: document.getElementById('venue').value,
+        location: document.getElementById('location').value,
         contactPhone: document.getElementById('contactPhone').value,
         description: document.getElementById('description').value,
       };

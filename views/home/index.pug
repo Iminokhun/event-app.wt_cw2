@@ -1,18 +1,21 @@
 include ../head.pug
 body
-    .container.mt-5
+    
+    .container.mt-5 
+      h5 This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service 
       .row.d-flex.align-items-center
         .col-md-6
           h1 List
         .col-md-6.text-end
           a.btn.btn-success(href='/add', role='button') Add      
       table.table.table-responsive.table-hover.table-striped.table-dark
+      
         thead
           tr
             th(scope="col") ID
-            th(scope="col") Event Name
+            th(scope="col") Title 
             th(scope="col") Event DateTime
-            th(scope="col") Venue
+            th(scope="col") Location
             th(scope="col") Contact Phone
             th(scope="col") Description
             th(scope="col") Actions
@@ -29,7 +32,7 @@ script.
           <td>${t.id}</td>
           <td>${ticket.eventName}</td>
           <td>${ticket.eventDateTime}</td>
-          <td>${ticket.venue}</td>
+          <td>${ticket.location}</td>
           <td>${ticket.contactPhone}</td>
           <td>${ticket.description}</td>
           <td>
