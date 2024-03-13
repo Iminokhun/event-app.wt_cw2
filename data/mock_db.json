@@ -1,13 +1,39 @@
 [
     {
         "id": "asf13rdsf",
-        "ticket": {    
+        "ticket": {
+            "eventName": "Andrea Bocelli",
+            "eventDateTime": "12/02/2024 19:00",
+            "venue": "Turkiston Palace",
+            "contactPhone": "712354440",
+            "seat": "sector: A, row: 15, seat: 25"
+        },
+        "event": {
+            "eventName": "Andrea Bocelli",
+            "eventDateTime": "12/02/2024 19:00",
+            "venue": "ascacacacacac",
+            "contactPhone": "+998712354440",
+            "seat": "sector: A, row: 15, seat: 25"
+        }
+    },
+    {
+        "id": "asf13r",
+        "ticket": {
             "eventName": "Andrea Bocelli",
             "eventDateTime": "12/02/2024 19:00",
             "venue": "Turkiston Palace",
             "contactPhone": "712354440",
             "seat": "sector: A, row: 15, seat: 25"
         }
+    },
+    {
+        "id": "tatn",
+        "ticket": {
+            "eventName": "Ella Glover",
+            "eventDateTime": "03/08/2024 19:05",
+            "venue": "Et duis est enim bla",
+            "contactPhone": "+998970367676",
+            "seat": "Magna nesciunt dolo"
+        }
     }
-
 ]

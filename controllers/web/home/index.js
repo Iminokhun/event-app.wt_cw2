@@ -1,12 +1,15 @@
+const event_service = require('../../../services/event')
+
 const home_controller = {
     index: async (req, res) =>{
         res.render('home');
     },
     add: async (req, res) =>{
-        res.render('home/add_edit');
+        res.render('home/add_edit', { mode: 'Add' });
     },
     update: async (req, res) =>{
-        res.render('home/add_edit');
+        const eventData = await event_service.getById(req.params.id);
+        res.render('home/add_edit', { mode: 'Update', eventData: eventData });
     }
 };
   
