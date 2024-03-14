@@ -1,5 +1,8 @@
 # event-app.wt_cw2
 
+Github repo: https://github.com/Iminokhun/event-app.wt_cw2.git
+Deploy Link: https://event-app-70cf.onrender.com
+
 Event app add important information to your customised events, such as the date, location, and description.
 Easily see and access prior events as well as those that are coming ahead for effective preparation.
 Update event details in a seamless manner to ensure that all information is correct and current.
